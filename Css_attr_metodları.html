@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css ve attr</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+	<p class="deneme">bu bir deneme paragrafıdır.<br>aaa</p>
+	<script>
+		$(".deneme").css({"color":"red","background-color":"yellow"});//deneme class ına sahip etikete css atadık.
+		$(".deneme").attr({"title":"deneme","align":"center"});//deneme class ına sahip etikete attribute atadık.
+		$(".deneme").removeAttr("align");//deneme class ına sahip etiketine atadığımız attributelerden birini kaldırdık.
+	</script>
+</body>
+</html>
