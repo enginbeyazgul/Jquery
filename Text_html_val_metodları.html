@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Text, html ve val metodları</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+	<p>Burası bir paragrafdır ve içinde <b>kalın</b> bir kelime barındırır.</p>
+	<input type="text" value="deneme">
+	<button class="bir">Text metodunu çalıştır!</button>
+	<button class="iki">Html metodunu çalıştır!</button>
+	<button class="üç">Val metodunu çalıştır!</button>
+	<script>
+		$(".bir").click(function(){
+			alert($("p").text());
+		});
+		$(".iki").click(function(){
+			alert($("p").html());
+		});
+		$(".üç").click(function(){
+			alert($("input").val());
+		});
+	</script>
+</body>
+</html>
