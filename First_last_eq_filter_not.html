@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>First,last,eq,filter ve not metodları</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+	<p class="bir">ilk paragraf</p>
+	<p class="iki">ilk paragraf</p>
+	<p class="üç">ilk paragraf</p>
+	<p class="dört">ilk paragraf</p>
+	<p class="beş">ilk paragraf</p>
+	<script>
+		$("p").first().css("background-color","red");
+		$("p").last().css("background-color","blue");
+		$("p").eq(2).css("background-color","magenta");
+		$("p").filter(".iki").css("background-color","aqua");
+		$("p").not(".iki,.bir,.üç,.beş").css("background-color","yellow");
+	</script>
+</body>
+</html>
