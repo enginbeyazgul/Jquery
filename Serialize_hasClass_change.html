@@ -3,8 +3,39 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Serialize, hasClass ve change metodları</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<style>
+		
+	</style>
 </head>
 <body>
-	
+	<form action="" method="post">
+		<table>
+			<tr><td>Ad soyad :</td><td><input type="text" name="adsoyad"></td></tr>
+			<tr><td>Yazı :</td><td><textarea name="yazi" cols="30" rows="7"></textarea></td></tr>
+			<tr><td>Şehir :</td>
+			<td><select name="sehir">
+				<option value="İstanbul">İstanbul</option>
+				<option value="Tunceli">Tunceli</option>
+				<option value="Ankara">Ankara</option>
+				</select></td></tr>
+			<tr><td></td><td><input class="submit" type="submit" value="Gönder!"></td></tr>
+		</table>
+	</form>
+	<p></p>
+	<script>
+		$(".submit").click(function(){
+			var form = $("form").serialize();
+			alert(form);
+			if($("input").hasClass("submit"))
+			{
+			alert("bu class mevcuttur.")
+			}
+		});
+		$("select").change(function(){
+			alert("şehir değiştirildi");
+		});
+		
+	</script>
 </body>
 </html>
