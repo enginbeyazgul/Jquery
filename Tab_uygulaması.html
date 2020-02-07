@@ -61,14 +61,14 @@
 	<div class="tab">Burası 3. tab içeriğidir.</div>
 	<script>
 		$("div").hide();
-		$("div").first().show();
+		$("div").first().show(800);
 		$("ul li").first().addClass("aktif");
 		$("ul li").click(function(){
 			var index = $(this).index();
 			$("ul li").removeClass("aktif");
 			$(this).addClass("aktif");
 			$("div").hide();
-			$("div").eq(index).show();
+			$("div").eq(index).show(800);
 		});
 	</script>
 </body>
