@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Animate metodu</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<style type="text/css">
+		.kutu{position: absolute; width: 75px; height: 75px; background-color: aqua;}
+	</style>
+</head>
+<body>
+	<button class="button">Animasyon başlat!</button>
+	<button class="button2">Animasyonu durdur!</button>
+	<div class="kutu">Yazı</div>
+	<script>
+		$(".button").click(function(){
+			$(".kutu").animate({
+				left:'350px',
+				width:'+=150px',
+				height:'+=150px',
+				fontSize:'+=80px'
+			},3000);
+		});
+		$(".button2").click(function(){
+			$(".kutu").stop();
+		});
+	</script>
+</body>
+</html>
