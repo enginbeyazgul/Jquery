@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>click ve trim</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+	
+	<ul class="deneme">
+		<li>bir</li>
+		<li>boşlukları kaldır</li>
+		<li>üç</li>
+		<li>dört</li>
+	</ul>
+	<input class="metin" type="text">
+	<label class="label">aaaa</label>
+	<script>
+		$(".deneme li").click(function(){//deneme classındaki li ye tıklanılınca
+			var tıklanılan = $(this).index();//tıklanılan li nin indis değerini al değişkene al(ilk indis 0)
+			if(tıklanılan == 1) //eğer tıklanılan li 2. li ise
+				{
+					var yazi = $(".metin").val();// metin classına sahip textboxun içinde yazanı değişkene aldık
+					$(".label").text($.trim(yazi));//textboxtaki yazıyı labelın içine trimleyerek attık
+				}
+		});
+	</script>
+</body>
+</html>
