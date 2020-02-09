@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Focus,wrap ve clone metodları</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<style>
+		.kutu
+		{
+			background-color: magenta;
+			border: 2px dotted crimson;
+			width: 100%;
+			height: 50px;
+			margin-bottom: 10px;
+			
+		}
+		.yazi
+		{
+			vertical-align: middle;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="kutu"><p class="yazi"><input type="text" name="metin"></p></div>
+	<div class="deneme"></div>
+	<script>
+		$("input[name=metin]").focus();//sayfa açılır açılmaz textbox a odaklanılıyor.
+		var klon = $(".kutu").clone();//klon değişkenine kutu classına ait özellikleri atadık.
+		$(".kutu").after(klon);// kutu class ına sahip divden sonra klon değişkeninin özelliklerine sahip bir div oluşturduk
+		$(".deneme").wrap('<div class="kutu"></div>');
+	</script>
+</body>
+</html>
