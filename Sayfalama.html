@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sayfalama</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<style>
+		*{padding: 0;margin: 0;}
+		.sayfalama
+		{
+			list-style: none;
+		}
+		.sayfalama li
+		{
+			padding: 20px;
+			text-align: center;
+			border-bottom: 1px solid #999;
+		}
+		.alt
+		{
+			padding: 15px;
+			text-align: center
+		}
+		.alt a
+		{
+			text-decoration: none;
+			color: #fff;
+			background-color: coral;
+			padding: 7px 12px 7px 12px;
+			margin: 2.5px;
+			box-shadow: 2px 2px 4.5px black;
+		}
+		.alt a:hover
+		{
+			background-color: chocolate;
+			transition-duration: 0.4s;
+		}
+		.aktif
+		{
+			background-color: crimson !important;
+		}
+		.aktif:hover
+		{
+			background-color: brown !important;
+			transition-duration: 0.4s !important;
+		}
+	</style>
+</head>
+<body>
+	<ul class="sayfalama">
+		<li>1. veri</li>
+		<li>2. veri</li>
+		<li>3. veri</li>
+		<li>4. veri</li>
+		<li>5. veri</li>
+		<li>6. veri</li>
+		<li>7. veri</li>
+		<li>8. veri</li>
+		<li>9. veri</li>
+		<li>10. veri</li>
+		<li>11. veri</li>
+		<li>12. veri</li>
+		<li>13. veri</li>
+	</ul>
+	<div class="alt"></div>
+	<script>
+		var toplamLi = $(".sayfalama li").length;
+		var limit = 2;
+		var sayfaSayisi = Math.round(toplamLi / limit);
+		for(var i = 1; i <= sayfaSayisi; i++)
+			{
+				$(".alt").append('<a href="#">'+ i +'</a>')
+			}
+		$(".alt a:first").addClass("aktif"); 
+		$(".sayfalama li:gt(1)").hide();// gt metodu ile indisi 1 olan li den sonraki divleri hide metodu ile gizledik.
+		$(".alt a").click(function(){
+			var tiklanilan = $(this).index()+1;
+			$(".sayfalama li").hide();
+			if(tiklanilan == 1) { $(".sayfalama li:gt(1)").hide(); $(".sayfalama li:lt(2)").show(); }
+			else { $('.sayfalama li:lt('+ (tiklanilan*limit) +'):gt('+ (tiklanilan*limit-3) +')').show(); }
+			
+		});
+	</script>
+</body>
+</html>
