@@ -1,1 +1,1 @@
-Bu depo jquery'de öğrendiğim  dersleri içerir.
+Bazı Jquery konuları.
